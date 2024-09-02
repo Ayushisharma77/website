@@ -7,6 +7,10 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+     <!-- Initialize the Data Layer -->
+  <script>
+    window.dataLayer = window.dataLayer || [];
+  </script>
 
 
     <!-- Google Tag Manager -->
@@ -16,6 +20,39 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-P2RQDB48');</script>
 <!-- End Google Tag Manager -->
+
+    <!-- Trigger the 'event_signup' when a user signs up -->
+<button onclick="signupEvent()">Sign Up</button>
+<script>
+  function signupEvent() {
+    window.dataLayer.push({
+      'event': 'event_signup',
+      'user_id': '12345',  // Example data
+      'signup_method': 'email'  // Example data
+    });
+  }
+</script>
+
+<!-- Trigger the 'event_purchase' when a user completes a purchase -->
+<button onclick="purchaseEvent()">Purchase</button>
+<script>
+  function purchaseEvent() {
+    window.dataLayer.push({
+      'event': 'event_purchase',
+      'transaction_id': '67890',  // Example data
+      'transaction_value': 99.99  // Example data
+    });
+  }
+</script>
+
+<!-- Trigger the 'event_pageview' when a page is viewed -->
+<script>
+  window.dataLayer.push({
+    'event': 'event_pageview',
+    'page_title': document.title,  // Example data
+    'page_url': window.location.href  // Example data
+  });
+</script>
 
 
     <style>

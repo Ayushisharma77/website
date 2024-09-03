@@ -22,17 +22,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
     <!-- Trigger the 'event_signup' when a user signs up -->
-<button onclick="signupEvent()">Sign Up</button>
-<script>
+
+
+
+    <script>
   function signupEvent() {
     window.dataLayer.push({
       'event': 'event_signup',
       'user_id': '12345',  // Example data
-      'signup_method': 'email'  // Example data
-         'user_type': 'premium'         // Variable 3
+      'signup_method': 'email',  // Example data
+      'user_type': 'premium'  // Variable 3
     });
   }
 </script>
+
 
 <!-- Trigger the 'event_purchase' when a user completes a purchase -->
 <button onclick="purchaseEvent()">Purchase</button>
@@ -180,6 +183,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <textarea class="form-control" id="message" rows="4" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
+                <button onclick="purchaseEvent()">Purchase</button>
             </form>
         </div>
     </div>

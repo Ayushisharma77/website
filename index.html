@@ -38,13 +38,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 <!-- Trigger the 'event_purchase' when a user completes a purchase -->
-<button onclick="purchaseEvent()">Purchase</button>
+
 <script>
   function purchaseEvent() {
     window.dataLayer.push({
       'event': 'event_purchase',
       'transaction_id': '67890',  // Example data
-      'transaction_value': 99.99  // Example data
+      'transaction_value': 99.99,  // Example data
         'currency': 'USD'              // Variable 3
     });
   }
@@ -184,6 +184,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
                 <button onclick="signupEvent()">Sign Up</button>
+                <button onclick="purchaseEvent()">Purchase</button>
             </form>
         </div>
     </div>
